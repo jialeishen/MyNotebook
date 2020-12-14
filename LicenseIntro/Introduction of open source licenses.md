@@ -25,15 +25,16 @@ The original comparison between more licenses can be found on [choosealicense.co
 
 |License|Commercial use|Distribution|Modification|Patent use|Private use|Disclose source|License and copyright notice|Network use is distribution|Same license|State changes|Liability|Trademark use|Warranty|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|GNU GPL 2.0|:green_circle:|:green_circle:|:green_circle:||:green_circle:|:blue_circle:|:blue_circle:||:blue_circle:|:blue_circle:|:red_circle:||:red_circle:|
-|GNU GPL 3.0|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:blue_circle:|:blue_circle:||:blue_circle:|:blue_circle:|:red_circle:||:red_circle:|
-|MIT License|:green_circle:|:green_circle:|:green_circle:||:green_circle:||:blue_circle:||||:red_circle:||:red_circle:|
-|Apache License 2.0|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:green_circle:||:blue_circle:|||:blue_circle:|:red_circle:|:red_circle:|:red_circle:|
+|GNU GPL 2.0|:green_circle:|:green_circle:|:green_circle:||:green_circle:|:large_blue_circle:|:large_blue_circle:||:large_blue_circle:|:large_blue_circle:|:red_circle:||:red_circle:|
+|GNU GPL 3.0|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:large_blue_circle:|:large_blue_circle:||:large_blue_circle:|:large_blue_circle:|:red_circle:||:red_circle:|
+|MIT License|:green_circle:|:green_circle:|:green_circle:||:green_circle:||:large_blue_circle:||||:red_circle:||:red_circle:|
+|Apache License 2.0|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:green_circle:||:large_blue_circle:|||:large_blue_circle:|:red_circle:|:red_circle:|:red_circle:|
 
 ## How to choose a open source license?
 [choosealicense.com](https://choosealicense.com/) webpage provides a simple guidance for selecting an open source license for your code.
 Paul Pagwell also draw a flowchart for guiding developers to select the open source license.
-![open source license selection flowchart](resource\open-source-licences.png)
+
+![open source license selection flowchart](resource/open-source-licences.png)
 ## Examples of license used by building performance analysis tools
 ### [EnergyPlus](https://github.com/NREL/EnergyPlus)
  * License: Own licensing condition (similar to GNU GPL 3.0, plus some authorization terms)
