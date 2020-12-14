@@ -30,6 +30,12 @@ The original comparison between more licenses can be found on [choosealicense.co
 |MIT License|:green_circle:|:green_circle:|:green_circle:||:green_circle:||:large_blue_circle:||||:red_circle:||:red_circle:|
 |Apache License 2.0|:green_circle:|:green_circle:|:green_circle:|:green_circle:|:green_circle:||:large_blue_circle:|||:large_blue_circle:|:red_circle:|:red_circle:|:red_circle:|
 
+|Mark|Definition|
+|:---:|---|
+|:green_circle:|Permissions|
+|:large_blue_circle:|Conditions|
+|:red_circle:|Limitations|
+
 ## How to choose a open source license?
 [choosealicense.com](https://choosealicense.com/) webpage provides a simple guidance for selecting an open source license for your code.
 Paul Pagwell also draw a flowchart for guiding developers to select the open source license.
