@@ -31,8 +31,6 @@ DEFINE_ON_DEMAND(exposure_udf)
 	FILE *fp_exp;
 	fp_exp=fopen("exposure_1.csv","w");
 	domain=Get_Domain(1);
-	int i;
-	int j;
 
 	thread_loop_c(t,domain)
 	{
@@ -45,7 +43,7 @@ DEFINE_ON_DEMAND(exposure_udf)
 				{*/
 					vol[0] += C_VOLUME(c,t);
 					// exposre[0][0] += C_YI(c,t,0)*C_VOLUME(c,t);
-					//int j;
+					int j;
 					for (j = 0; j < pol_num; j++)
 					{
 						exposre[0][j] += C_YI(c,t,j)*C_VOLUME(c,t);
@@ -54,7 +52,7 @@ DEFINE_ON_DEMAND(exposure_udf)
 				catch
 				{
 					vol[0] = -1;
-					//int j;
+					int j;
 					for (j = 0; j < pol_num; j++)
 					{
 						exposre[0][j] = 1;
@@ -67,7 +65,8 @@ DEFINE_ON_DEMAND(exposure_udf)
 				/*try
 				{*/
 					vol[1] += C_VOLUME(c,t);
-					for (int j = 0; j < pol_num; j++)
+					int j;
+					for (j = 0; j < pol_num; j++)
 					{
 						exposre[1][j] += C_YI(c,t,j)*C_VOLUME(c,t);
 					}
@@ -75,7 +74,8 @@ DEFINE_ON_DEMAND(exposure_udf)
 				catch
 				{
 					vol[1] = -1;
-					for (int j = 0; j < pol_num; j++)
+					int j;
+					for (j = 0; j < pol_num; j++)
 					{
 						exposre[1][j] = 1;
 					}
@@ -87,7 +87,8 @@ DEFINE_ON_DEMAND(exposure_udf)
 				/*try
 				{*/
 					vol[2] += C_VOLUME(c,t);
-					for (int j = 0; j < pol_num; j++)
+					int j;
+					for (j = 0; j < pol_num; j++)
 					{
 						exposre[2][j] += C_YI(c,t,j)*C_VOLUME(c,t);
 					}
@@ -95,7 +96,8 @@ DEFINE_ON_DEMAND(exposure_udf)
 				catch
 				{
 					vol[2] = -1;
-					for (int j = 0; j < pol_num; j++)
+					int j;
+					for (j = 0; j < pol_num; j++)
 					{
 						exposre[2][j] = 1;
 					}
@@ -104,10 +106,11 @@ DEFINE_ON_DEMAND(exposure_udf)
 		}
 		end_c_loop(c,t)
 	}
-
-	for (int i = 0; i < 120; i++)
+	int i;
+	for (i = 0; i < 120; i++)
 	{
-		for (int j = 0; j < pol_num; j++)
+		int j;
+		for (j = 0; j < pol_num; j++)
 		{
 			exposre[i][j] = exposre[i][j] / vol[i];
 		}
@@ -115,7 +118,8 @@ DEFINE_ON_DEMAND(exposure_udf)
 	
 	// write data to file
 	char v = "";
-	for (int i = 0; i < 120; i++)
+	int i;
+	for (i = 0; i < 120; i++)
 	{
 		v += vol[i] + ",";
 	}
@@ -123,9 +127,11 @@ DEFINE_ON_DEMAND(exposure_udf)
 	fprintf(fp_exp, v);
 
 	char e = "";
-	for (int i = 0; i < 120; i++)
+	int i;
+	for (i = 0; i < 120; i++)
 	{
-		for (int j = 0; j < pol_num; j++)
+		int j;
+		for (j = 0; j < pol_num; j++)
 		{
 			e += exposre[i][j] + ",";
 		}
