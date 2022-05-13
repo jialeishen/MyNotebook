@@ -65,8 +65,8 @@ DEFINE_ON_DEMAND(exposure_udf)
 /**************************
 			if( sqrt( (x[0]-(-2.95+5.82*0))*(x[0]-(-2.95+5.82*0))+(x[1]-(-0.25+3.36*0))*(x[1]-(-0.25+3.36*0))+(x[2]-9.180)*(x[2]-9.180) ) <= R )      //coordinates of the particular area
 			{
-				/*try
-				{*/
+				//try
+				//{
 					vol[0] += C_VOLUME(c,t);
 					// exposure[0][0] += C_YI(c,t,0)*C_VOLUME(c,t);
 					//int j = 0;
@@ -74,16 +74,16 @@ DEFINE_ON_DEMAND(exposure_udf)
 					{
 						exposure[0][j] += C_YI(c,t,j+ini_pol)*C_VOLUME(c,t);
 					}
-				/*}
-				catch
-				{
-					vol[0] = -1;
-					//int j = 0;
-					for (j = 0; j < pol_num; j++)
-					{
-						exposure[0][j] = 1;
-					}
-				}*/
+				//}
+				//catch
+				//{
+				//	vol[0] = -1;
+				//	//int j = 0;
+				//	for (j = 0; j < pol_num; j++)
+				//	{
+				//		exposure[0][j] = 1;
+				//	}
+				//}
 				
 			}
 			else if( sqrt( (x[0]-(-2.17+5.82*0))*(x[0]-(-2.17+5.82*0))+(x[1]-(0+3.36*0))*(x[1]-(0+3.36*0))+(x[2]-9.180)*(x[2]-9.180) ) <= R )      //coordinates of the particular area
